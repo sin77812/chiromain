@@ -1,16 +1,15 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
-interface MobileNavigationProps {
-  // No props currently
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface MobileNavigationProps {}
 
 export default function MobileNavigation({}: MobileNavigationProps) {
   const [activeSection, setActiveSection] = useState<string>('hero');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navigationItems = [
+  const navigationItems = useMemo(() => [
     { id: 'hero', label: 'HOME', href: '#hero' },
     { id: 'portfolio1', label: 'CHUNGDAM', href: '#portfolio1' },
     { id: 'portfolio2', label: 'SEONGBUK', href: '#portfolio2' },
@@ -18,7 +17,7 @@ export default function MobileNavigation({}: MobileNavigationProps) {
     { id: 'viewport', label: 'PERSPECTIVE', href: '#viewport' },
     { id: 'gallery', label: 'GALLERY', href: '#gallery' },
     { id: 'contact', label: 'CONTACT', href: '#contact' }
-  ];
+  ], []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

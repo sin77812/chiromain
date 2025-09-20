@@ -1,16 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
-interface NavigationProps {
-  // No props currently
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface NavigationProps {}
 
 export default function Navigation({}: NavigationProps) {
   const [activeSection, setActiveSection] = useState<string>('hero');
-  const [isMobile, setIsMobile] = useState(false);
 
-  const navigationItems = [
+  const navigationItems = useMemo(() => [
     { id: 'hero', label: 'HOME', href: '#hero' },
     { id: 'portfolio1', label: 'CHUNGDAM', href: '#portfolio1' },
     { id: 'portfolio2', label: 'SEONGBUK', href: '#portfolio2' },
@@ -18,7 +16,7 @@ export default function Navigation({}: NavigationProps) {
     { id: 'viewport', label: 'PERSPECTIVE', href: '#viewport' },
     { id: 'gallery', label: 'GALLERY', href: '#gallery' },
     { id: 'contact', label: 'CONTACT', href: '#contact' }
-  ];
+  ], []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -31,20 +29,6 @@ export default function Navigation({}: NavigationProps) {
   };
 
   useEffect(() => {
-    // 모바일 여부 감지 (<=1023px)
-    const mql = window.matchMedia('(max-width: 1023px)');
-    const handleChange = (e: MediaQueryListEvent | MediaQueryList) => {
-      // Safari 호환: MediaQueryListEvent | MediaQueryList 모두 지원
-      const matches = 'matches' in e ? e.matches : (e as MediaQueryList).matches;
-      setIsMobile(matches);
-    };
-    handleChange(mql);
-    mql.addEventListener?.('change', handleChange as EventListener);
-    // Safari fallback
-    if ('addListener' in mql && mql.addListener) {
-      mql.addListener(handleChange as EventListener);
-    }
-
     // 현재 보이는 섹션 감지
     const observerOptions = {
       root: null,
@@ -68,11 +52,6 @@ export default function Navigation({}: NavigationProps) {
 
     return () => {
       observer.disconnect();
-      mql.removeEventListener?.('change', handleChange as EventListener);
-      // Safari fallback
-      if ('removeListener' in mql && mql.removeListener) {
-        mql.removeListener(handleChange as EventListener);
-      }
     };
   }, [navigationItems]);
 
