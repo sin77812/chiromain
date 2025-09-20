@@ -44,12 +44,16 @@ export default function PortfolioSection({
         });
 
         // Set initial states
+        if (!titleRef.current || !contentRef.current) return;
+        
         gsap.set(titleRef.current, { y: '100vh' });
         gsap.set(contentRef.current, { 
           y: '120vh', 
           x: reverse ? '50vw' : '-50vw' 
         });
-        gsap.set(titleRef.current.parentElement, { opacity: 0 });
+        if (titleRef.current.parentElement) {
+          gsap.set(titleRef.current.parentElement, { opacity: 0 });
+        }
 
         // Create timeline for coordinated animations
         const tl = gsap.timeline({
@@ -65,10 +69,12 @@ export default function PortfolioSection({
         });
 
         // Show title container first
-        tl.to(titleRef.current.parentElement, { 
-          opacity: 1, 
-          duration: 0.1 
-        }, 0);
+        if (titleRef.current?.parentElement) {
+          tl.to(titleRef.current.parentElement, { 
+            opacity: 1, 
+            duration: 0.1 
+          }, 0);
+        }
 
         // Main title animation - moves up and stops in center
         tl.to(titleRef.current, {
