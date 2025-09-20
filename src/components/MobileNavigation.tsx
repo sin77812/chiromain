@@ -2,8 +2,7 @@
 
 import { useEffect, useState, useMemo } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface MobileNavigationProps {}
+type MobileNavigationProps = Record<string, never>;
 
 export default function MobileNavigation({}: MobileNavigationProps) {
   const [activeSection, setActiveSection] = useState<string>('hero');

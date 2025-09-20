@@ -2,8 +2,7 @@
 
 import { useEffect, useState, useMemo } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface NavigationProps {}
+type NavigationProps = Record<string, never>;
 
 export default function Navigation({}: NavigationProps) {
   const [activeSection, setActiveSection] = useState<string>('hero');
