@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { gsap } from '@/lib/gsap';
 
-interface NavigationProps {}
+interface NavigationProps {
+  // No props currently
+}
 
 export default function Navigation({}: NavigationProps) {
   const [activeSection, setActiveSection] = useState<string>('hero');
@@ -38,9 +39,11 @@ export default function Navigation({}: NavigationProps) {
       setIsMobile(matches);
     };
     handleChange(mql);
-    mql.addEventListener?.('change', handleChange as any);
-    // @ts-ignore - Safari fallback
-    mql.addListener && mql.addListener(handleChange as any);
+    mql.addEventListener?.('change', handleChange as EventListener);
+    // Safari fallback
+    if ('addListener' in mql && mql.addListener) {
+      mql.addListener(handleChange as EventListener);
+    }
 
     // 현재 보이는 섹션 감지
     const observerOptions = {
@@ -65,15 +68,15 @@ export default function Navigation({}: NavigationProps) {
 
     return () => {
       observer.disconnect();
-      mql.removeEventListener?.('change', handleChange as any);
-      // @ts-ignore - Safari fallback
-      mql.removeListener && mql.removeListener(handleChange as any);
+      mql.removeEventListener?.('change', handleChange as EventListener);
+      // Safari fallback
+      if ('removeListener' in mql && mql.removeListener) {
+        mql.removeListener(handleChange as EventListener);
+      }
     };
-  }, []);
+  }, [navigationItems]);
 
   const blendAllowed = !['hero', 'portfolio1', 'portfolio2'].includes(activeSection);
-  const mobileDarkSections = new Set(['hero', 'portfolio1', 'portfolio2']);
-  const mobileTheme: 'dark' | 'light' | 'desktop' = isMobile ? (mobileDarkSections.has(activeSection) ? 'dark' : 'light') : 'desktop';
 
   return (
     <nav className={`hidden lg:block fixed top-lg left-1/2 -translate-x-1/2 z-50 ${blendAllowed ? 'mix-blend-difference' : ''}`}>

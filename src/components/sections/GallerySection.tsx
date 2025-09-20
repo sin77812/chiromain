@@ -68,7 +68,7 @@ export default function GallerySection({ id }: GallerySectionProps) {
     };
   }, []);
 
-  const renderMarqueeRow = (images: GalleryItem[], direction: 'normal' | 'reverse') => (
+  const renderMarqueeRow = (images: GalleryItem[]) => (
     <div className="flex will-change-transform">
       {[...images, ...images].map((image, index) => (
         <div
@@ -96,7 +96,7 @@ export default function GallerySection({ id }: GallerySectionProps) {
           className="animate-marquee-mobile lg:animate-marquee"
           style={{ animationDirection: 'normal' }}
         >
-          {renderMarqueeRow(row1Images, 'normal')}
+          {renderMarqueeRow(row1Images)}
         </div>
         
         <div 
@@ -104,7 +104,7 @@ export default function GallerySection({ id }: GallerySectionProps) {
           className="animate-marquee-reverse-mobile lg:animate-marquee-reverse"
           style={{ animationDirection: 'reverse' }}
         >
-          {renderMarqueeRow(row2Images, 'reverse')}
+          {renderMarqueeRow(row2Images)}
         </div>
       </div>
     </section>

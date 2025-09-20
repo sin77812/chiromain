@@ -33,7 +33,7 @@ export default function PortfolioSection({
 
       mm.add("(min-width: 1024px)", () => {
         // Pin the entire section for scroll lock
-        const pinST = ScrollTrigger.create({
+        ScrollTrigger.create({
           trigger: sectionRef.current,
           start: 'top top',
           end: 'bottom bottom',
@@ -124,7 +124,7 @@ export default function PortfolioSection({
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [index, reverse]);
 
   return (
     <section 

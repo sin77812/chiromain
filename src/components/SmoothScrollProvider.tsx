@@ -9,7 +9,7 @@ interface SmoothScrollProviderProps {
 }
 
 export default function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
-  const lenisRef = useRef<any>(null);
+  const lenisRef = useRef<ReturnType<typeof initSmoothScroll> | null>(null);
 
   useEffect(() => {
     // Initialize Lenis with proper GSAP integration

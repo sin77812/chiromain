@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { gsap } from '@/lib/gsap';
 
-interface MobileNavigationProps {}
+interface MobileNavigationProps {
+  // No props currently
+}
 
 export default function MobileNavigation({}: MobileNavigationProps) {
   const [activeSection, setActiveSection] = useState<string>('hero');
@@ -59,7 +60,7 @@ export default function MobileNavigation({}: MobileNavigationProps) {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [navigationItems]);
 
   // 메뉴 오픈 시 body 스크롤 방지
   useEffect(() => {

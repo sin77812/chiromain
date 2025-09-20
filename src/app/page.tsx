@@ -1,6 +1,5 @@
 import HeroSection from '@/components/sections/HeroSection';
 import MobileHeroSection from '@/components/sections/MobileHeroSection';
-import PortfolioSection from '@/components/sections/PortfolioSection';
 import PortfolioSectionSimple from '@/components/sections/PortfolioSectionSimple';
 import PhilosophySection from '@/components/sections/PhilosophySection';
 import MobilePhilosophySection from '@/components/sections/MobilePhilosophySection';

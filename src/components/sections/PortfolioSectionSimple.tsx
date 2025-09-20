@@ -121,9 +121,11 @@ export default function PortfolioSectionSimple({
           }, 0.15);
 
         // 정방향 진행 중 순간이동 방지용(정지점 유지)
-        tl.scrollTrigger?.vars && (tl.scrollTrigger.vars.onUpdate = (self: any) => {
-          if (self.direction === 1) gsap.set(container, { y: metrics.toY });
-        });
+        if (tl.scrollTrigger?.vars) {
+          tl.scrollTrigger.vars.onUpdate = (self: ScrollTrigger) => {
+            if (self.direction === 1) gsap.set(container, { y: metrics.toY });
+          };
+        }
 
         // 3) 문단 페이드 없음 (항상 선명)
       });
