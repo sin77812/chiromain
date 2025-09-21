@@ -202,7 +202,7 @@ export default function PortfolioSectionSimple({
           <div className="relative z-30">
             <h2 
               ref={titleRef}
-              className="text-h1 font-light tracking-tight text-void-white korean text-center"
+              className="text-h1 font-black-han tracking-tight text-void-white text-center"
             >
               {title}
             </h2>
@@ -218,7 +218,7 @@ export default function PortfolioSectionSimple({
             {description.map((paragraph, index) => (
               <p 
                 key={index}
-                className="text-body font-regular tracking-wide text-void-white korean leading-relaxed"
+                className="text-body font-noto font-regular tracking-wide text-void-white leading-relaxed"
               >
                 {paragraph}
               </p>

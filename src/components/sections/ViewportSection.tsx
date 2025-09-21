@@ -75,7 +75,7 @@ export default function ViewportSection({ id }: ViewportSectionProps) {
           loop
           playsInline
         >
-          <source src="/videos/viewportback.mp4" type="video/mp4" />
+          <source src="https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8+%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB+%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -95,16 +95,16 @@ export default function ViewportSection({ id }: ViewportSectionProps) {
           className="relative z-20 h-full flex flex-col justify-start pt-[10vh] px-2xl"
         >
           <div className="max-w-4xl">
-            <h2 className="text-h1 lg:text-display font-thin tracking-tighter text-void-black mb-md korean">
+            <h2 className="text-h1 lg:text-display font-black-han tracking-tighter text-void-black mb-md">
               공간을 통해 보는<br />
               새로운 시각
             </h2>
-            <p className="text-body lg:text-h3 font-light text-void-black/80 leading-relaxed korean max-w-2xl">
+            <p className="text-body lg:text-h3 font-noto font-light text-void-black/80 leading-relaxed max-w-2xl">
               건축은 단순히 공간을 만드는 것이 아닙니다.<br />
               빛과 그림자, 열림과 닫힘의 조화로운 리듬을 통해<br />
               삶에 새로운 관점을 제시합니다.
             </p>
-            <p className="text-caption lg:text-body font-light text-void-black/60 mt-lg korean">
+            <p className="text-caption lg:text-body font-noto font-light text-void-black/60 mt-lg">
               우리는 각 프로젝트마다 독특한 시각적 프레임을 만들어<br />
               일상에 특별한 순간을 선사합니다.
             </p>

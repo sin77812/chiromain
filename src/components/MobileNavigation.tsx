@@ -128,7 +128,7 @@ export default function MobileNavigation({}: MobileNavigationProps) {
                 <button
                   onClick={() => scrollToSection(item.id)}
                   className={`
-                    block text-2xl font-light tracking-wider 
+                    block text-2xl font-noto font-light tracking-wider 
                     text-void-white transition-all duration-300
                     transform hover:scale-105
                     ${activeSection === item.id 

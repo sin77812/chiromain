@@ -17,20 +17,32 @@ export default function GallerySection({ id }: GallerySectionProps) {
   const row2Ref = useRef<HTMLDivElement>(null);
 
   const row1Images: GalleryItem[] = [
-    'aix3u8aix3u8aix3', 'b3t5xmb3t5xmb3t5', 'e1ija0e1ija0e1ij', 'e2mz2fe2mz2fe2mz',
-    'fkvfhyfkvfhyfkvf (1)', 'l6rzk0l6rzk0l6rz', 'n3yokhn3yokhn3yo', 'n5klvn5klvn5klvn (1)'
-  ].map((name, i) => ({
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_aix3u8aix3u8aix3.png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_b3t5xmb3t5xmb3t5.png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_e1ija0e1ija0e1ij.png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_e2mz2fe2mz2fe2mz.png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_fkvfhyfkvfhyfkvf+(1).png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_l6rzk0l6rzk0l6rz.png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_1ly01s1ly01s1ly0.png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_n5klvn5klvn5klvn+(1).png'
+  ].map((src, i) => ({
     id: i,
-    src: `/images/Gemini_Generated_Image_${name}.png`,
+    src,
     alt: `Architectural space ${i + 1}`
   }));
 
   const row2Images: GalleryItem[] = [
-    'na8etina8etina8e', 'o7fvd5o7fvd5o7fv (1)', 'oziex6oziex6ozie (1)', 'ud5kajud5kajud5k (1)',
-    'aix3u8aix3u8aix3', 'b3t5xmb3t5xmb3t5', 'e1ija0e1ija0e1ij', 'e2mz2fe2mz2fe2mz'
-  ].map((name, i) => ({
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_na8etina8etina8e.png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_o7fvd5o7fvd5o7fv+(1).png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_oziex6oziex6ozie+(1).png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_ud5kajud5kajud5k+(1).png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_2c6n652c6n652c6n.png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_5j3ail5j3ail5j3a.png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_6j5awf6j5awf6j5a.png',
+    'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_abb91abb91abb91a.png'
+  ].map((src, i) => ({
     id: i + 8,
-    src: `/images/Gemini_Generated_Image_${name}.png`,
+    src,
     alt: `Interior design ${i + 1}`
   }));
 

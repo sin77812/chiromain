@@ -40,14 +40,14 @@ export default function Home() {
           id="portfolio1"
           title="청담 H 레지던스"
           description={chungdamDescription}
-          imageSrc="/images/portfolio1.png"
+          imageSrc="https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/portfolio1.png"
         />
         
         <PortfolioSectionSimple
           id="portfolio2"
           title="성북동 계곡 주택"
           description={seongbukDescription}
-          imageSrc="/images/portfolio2.png"
+          imageSrc="https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/portfolio2.png"
           reverse={true}
         />
         

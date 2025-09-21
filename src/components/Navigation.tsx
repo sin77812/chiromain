@@ -65,7 +65,7 @@ export default function Navigation({}: NavigationProps) {
               <button
                 onClick={() => scrollToSection(item.id)}
                 className={`
-                  relative group text-body font-medium tracking-wider transition-opacity duration-300 text-white
+                  relative group text-body font-noto font-medium tracking-wider transition-opacity duration-300 text-white
                   ${activeSection === item.id ? 'opacity-100' : 'opacity-70 hover:opacity-100'}
                 `}
               >

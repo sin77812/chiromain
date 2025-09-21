@@ -72,14 +72,14 @@ export default function HeroSection({ id }: HeroSectionProps) {
         loop
         playsInline
       >
-        <source src="/videos/benner.mp4" type="video/mp4" />
+        <source src="https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/benner.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-void-black/30" />
       
       <div className="relative z-10 flex h-full items-center justify-center">
         <h1 
           ref={titleRef}
-          className="text-display lg:text-display md:text-h1 sm:text-h2 font-thin tracking-tighter leading-none text-void-white text-center px-md korean will-change-transform"
+          className="text-display lg:text-display md:text-h1 sm:text-h2 font-black-han tracking-tighter leading-none text-void-white text-center px-md will-change-transform"
         >
           당신이 머무를,<br />당신만의 공간
         </h1>

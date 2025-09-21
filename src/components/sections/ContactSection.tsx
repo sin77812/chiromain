@@ -58,7 +58,7 @@ export default function ContactSection({ id }: ContactSectionProps) {
         
         <h2 
           className={`
-            relative z-10 font-thin leading-none text-center tracking-tighter
+            relative z-10 font-black-han leading-none text-center tracking-tighter
             transition-colors duration-700 ease-out
             ${isHovered ? 'text-void-white' : 'text-void-black'}
           `}

@@ -23,9 +23,11 @@ const config: Config = {
         }
       },
       fontFamily: {
-        'display': ['Inter', 'Helvetica', 'sans-serif'],
-        'body': ['Inter', 'Arial', 'sans-serif'],
-        'korean': ['Pretendard', 'Apple SD Gothic Neo', 'sans-serif'],
+        'display': ['Black Han Sans', 'sans-serif'],
+        'body': ['Noto Sans KR', 'sans-serif'],
+        'korean': ['Noto Sans KR', 'sans-serif'],
+        'black-han': ['Black Han Sans', 'sans-serif'],
+        'noto': ['Noto Sans KR', 'sans-serif'],
       },
       fontSize: {
         'display': ['72px', { lineHeight: '1.1', letterSpacing: '-0.02em' }],

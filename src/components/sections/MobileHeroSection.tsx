@@ -86,21 +86,21 @@ export default function MobileHeroSection({ id }: MobileHeroSectionProps) {
         loop
         playsInline
       >
-        <source src="/videos/benner.mp4" type="video/mp4" />
+        <source src="https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/benner.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-void-black/30" />
       
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6">
         <h1 
           ref={titleRef}
-          className="text-4xl sm:text-5xl md:text-6xl font-thin tracking-tighter leading-none text-void-white text-center korean will-change-transform"
+          className="text-4xl sm:text-5xl md:text-6xl font-black-han tracking-tighter leading-none text-void-white text-center will-change-transform"
         >
           당신이 머무를,<br />당신만의 공간
         </h1>
         
         <p 
           ref={subtitleRef}
-          className="mt-8 text-lg sm:text-xl font-light tracking-wide leading-relaxed text-void-white/90 text-center max-w-md korean will-change-transform"
+          className="mt-8 text-lg sm:text-xl font-noto font-light tracking-wide leading-relaxed text-void-white/90 text-center max-w-md will-change-transform"
         >
           시간이 멈춘 듯한<br />
           고요함 속에서<br />

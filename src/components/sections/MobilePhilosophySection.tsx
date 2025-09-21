@@ -63,7 +63,14 @@ export default function MobilePhilosophySection({ id }: MobilePhilosophySectionP
     
     return {
       id: i,
-      src: `/images/Gemini_Generated_Image_${['1ly01s1ly01s1ly0', '2c6n652c6n652c6n', '5j3ail5j3ail5j3a', '6j5awf6j5awf6j5a', 'abb91abb91abb91a', 'ag5lalag5lalag5l'][i]}.png`,
+      src: [
+        'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_1ly01s1ly01s1ly0.png',
+        'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_2c6n652c6n652c6n.png',
+        'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_5j3ail5j3ail5j3a.png',
+        'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_6j5awf6j5awf6j5a.png',
+        'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_abb91abb91abb91a.png',
+        'https://chiro-web.s3.ap-northeast-2.amazonaws.com/chiromain/Gemini_Generated_Image_ag5lalag5lalag5l.png'
+      ][i],
       style: {
         gridColumn: pos.col,
         gridRow: pos.row,
@@ -107,7 +114,7 @@ export default function MobilePhilosophySection({ id }: MobilePhilosophySectionP
       <div className="relative z-10 h-full flex items-center justify-center">
         <h2 
           ref={titleRef}
-          className="absolute left-1/2 -translate-x-1/2 top-[15vh] text-3xl sm:text-4xl md:text-5xl font-thin tracking-tighter leading-tight text-void-black text-center korean will-change-transform px-6"
+          className="absolute left-1/2 -translate-x-1/2 top-[15vh] text-3xl sm:text-4xl md:text-5xl font-black-han tracking-tighter leading-tight text-void-black text-center will-change-transform px-6"
         >
           시간이 멈춘 듯한<br />공간을 창조합니다
         </h2>
